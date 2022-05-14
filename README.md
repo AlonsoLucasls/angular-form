@@ -3,7 +3,7 @@
 
 ![](https://github.com/AlonsoLucasls/angular-form/blob/main/featureAngularForm.gif)
 
-App created to help the Angular community that needs to start building an Angular Reactive form, so you can use this project as a base project.
+App created to help the Angular community that needs to start building an Angular Reactive form, you can use this project as a base project.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
