@@ -1,7 +1,7 @@
 # Angular Reactive forms
 
 
-![](https://github.com/AlonsoLucasls/angular-form/blob/main/featureAngularForm.gif)
+![](https://github.com/AlonsoLucasls/angular-form/blob/main/featureAngularForm1.gif)
 
 App created to help the Angular community that needs to start building an Angular Reactive form, you can use this project as a base project.
 
