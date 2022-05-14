@@ -1,4 +1,4 @@
-# AngularForm
+# Angular Reactive forms
 
 
 ![](https://github.com/AlonsoLucasls/angular-form/blob/main/featureAngularForm.gif)
