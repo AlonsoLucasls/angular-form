@@ -1,4 +1,9 @@
-# AngularForm
+# Angular Reactive forms
+
+
+![](https://github.com/AlonsoLucasls/angular-form/blob/main/featureAngularForm.gif)
+
+App created to help the Angular community that needs to start building an Angular Reactive form, you can use this project as a base project.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
@@ -25,3 +30,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+
+20 He replied, “Because you have so little faith. Truly I tell you, if you have faith as small as a mustard seed, you can say to this mountain, ‘Move from here to there,’ and it will move. Nothing will be impossible for you.”
+
+ - Matthew 17:20
+
+
+
