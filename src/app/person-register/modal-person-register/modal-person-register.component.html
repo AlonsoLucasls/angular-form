@@ -1,0 +1,144 @@
+
+<button mat-icon-button class="close-button" (click)="close()">
+  <mat-icon>close</mat-icon>
+</button>
+<h2>User info</h2>
+<form [formGroup]="formGroup" (ngSubmit)="save()" autocomplete="off">
+  <div class="flex-content">
+    <div class="input-flex input-70-per">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" autocomplete="off" />
+      </mat-form-field>
+      <div
+        *ngIf="formGroup.get('name')?.invalid && formGroup.get('name')?.touched"
+        class="error-alert"
+      >
+        <div *ngIf="formGroup.get('name')?.errors?.['required']">
+          Name is required.
+        </div>
+      </div>
+    </div>
+    <div class="input-flex input-30-per">
+      <mat-form-field appearance="outline">
+        <mat-label>Plan</mat-label>
+        <mat-select formControlName="plan" [compareWith]="compareObjectPlan">
+          <mat-option *ngFor="let plan of planList" [value]="plan">
+            {{ plan.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div
+        *ngIf="formGroup.get('plan')?.invalid && formGroup.get('plan')?.touched"
+        class="error-alert"
+      >
+        <div *ngIf="formGroup.get('plan')?.errors?.['required']">
+          Plan is required.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex-content">
+    <div class="input-flex input-50-per">
+      <mat-form-field appearance="outline">
+        <mat-label>Price</mat-label>
+        <input
+          matInput
+          formControlName="price"
+          currencyMask
+          [options]="{
+            prefix: '',
+            thousands: '.',
+            decimal: ',',
+            precision: '2',
+            allowNegative: false
+          }"
+          [min]="1"
+          autocomplete="off"
+        />
+      </mat-form-field>
+      <div
+        *ngIf="
+          formGroup.get('price')?.invalid && formGroup.get('price')?.touched
+        "
+        class="error-alert"
+      >
+        <div *ngIf="formGroup.get('price')?.errors?.['required']">
+          Price is required.
+        </div>
+      </div>
+    </div>
+    <div class="input-flex input-50-per">
+      <mat-form-field appearance="outline">
+        <mat-label>Coin</mat-label>
+        <mat-select formControlName="coin" [compareWith]="compareObjectCoin">
+          <mat-option *ngFor="let coin of coinList" [value]="coin">
+            {{ coin.simbol }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div
+        *ngIf="formGroup.get('coin')?.invalid && formGroup.get('coin')?.touched"
+        class="error-alert"
+      >
+        <div *ngIf="formGroup.get('coin')?.errors?.['required']">
+          Coin is required.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="input-flex input-100-per">
+    <mat-form-field appearance="outline" class="input-100-per">
+      <mat-label>Service</mat-label>
+      <input
+        type="text"
+        placeholder="Service"
+        matInput
+        formControlName="service"
+        [matAutocomplete]="autoCompleteService"
+        autocomplete="off"
+      />
+      <mat-autocomplete
+        autoActiveFirstOption
+        #autoCompleteService="matAutocomplete"
+        [displayWith]="displayFnService"
+      >
+        <mat-option
+          *ngFor="let service of filteredOptions | async"
+          [value]="service"
+        >
+          {{ service.name }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <div
+      *ngIf="
+        formGroup.get('service')?.invalid && formGroup.get('service')?.touched
+      "
+      class="error-alert"
+    >
+      <div *ngIf="formGroup.get('service')?.errors?.['required']">
+        Service is required.
+      </div>
+    </div>
+  </div>
+  <div class="buttons-form" *ngIf="!data ?? false">
+    <button
+      type="button"
+      mat-raised-button
+      (click)="close()"
+      class="cancel-button"
+    >
+      Cancel
+    </button>
+
+    <button
+      [disabled]="!formGroup.valid"
+      type="submit"
+      mat-raised-button
+      color="primary"
+    >
+      Save
+    </button>
+  </div>
+</form>

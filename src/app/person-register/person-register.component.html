@@ -1,0 +1,11 @@
+<div class="manin-content">
+  <div>
+    <div>
+      <button color="primary" mat-raised-button (click)="openModal()">
+        <mat-icon>add</mat-icon> New person
+      </button>
+    </div>
+
+    <app-grid-person [userList]="userListRegistered"></app-grid-person>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.manin-content {
+  display: flex;
+  justify-content: center;
+}
+
+.manin-content > div {
+  width: 80%;
+  margin-top: 15px;
+}
+button {
+  margin: 0 0 5px 0px;
+}

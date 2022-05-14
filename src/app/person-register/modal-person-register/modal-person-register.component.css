@@ -1,0 +1,42 @@
+.close-button {
+  float: right;
+  top: -24px;
+  right: -24px;
+  color: red;
+}
+.buttons-form {
+  display: flex;
+  place-content: flex-end;
+}
+.cancel-button {
+  margin-right: 10px;
+}
+mat-form-field {
+  height: 60px;
+  margin-right: 5px;
+}
+
+.error-alert {
+  color: red;
+}
+
+.flex-content {
+  display: flex;
+  width: 100%;
+}
+.input-flex {
+  display: flex;
+  flex-direction: column;
+}
+.input-70-per {
+  width: 70%;
+}
+.input-30-per {
+  width: 30%;
+}
+.input-50-per {
+  width: 50%;
+}
+.input-100-per {
+  width: 100%;
+}
