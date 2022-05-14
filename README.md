@@ -3,6 +3,8 @@
 
 ![](https://github.com/AlonsoLucasls/angular-form/blob/main/featureAngularForm.gif)
 
+App created to help the Angular community that needs to start building an Angular Reactive form, so you can use this project as a base project.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
 ## Development server
@@ -28,3 +30,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
